@@ -7,7 +7,7 @@
  * @package    WHMCS
  * @author     Ivan Petermann <contato@ivanpetermann.com>
  * @copyright  Copyright (c) Ivan Petermann 2019
- * @version    1.1.1
+ * @version    1.1.2
  * @link       https://github.com/petermann/whmcs-client-credit-balance
  */
 
@@ -21,7 +21,7 @@ add_hook('ClientAreaHomepagePanels', 1, function (Item $homePagePanels) {
     $bodyhtml = '<p>'.sprintf(Lang::trans('availcreditbaldesc'),formatCurrency($client->credit, $currencyData)).'.</p>';
     $creditPanel = $homePagePanels->addChild( 'Credit Balance', array(
       'label' => Lang::trans('availcreditbal'),
-      'icon' => 'fa-money',
+      'icon' => 'fa-money-bill-alt',
       'order' => '100',
       'extras' => array(
         'color' => 'green',
